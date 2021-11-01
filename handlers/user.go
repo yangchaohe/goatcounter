@@ -199,7 +199,7 @@ func (h user) requestLogin(w http.ResponseWriter, r *http.Request) error {
 	}
 
 	auth.SetCookie(w, *user.LoginToken, cookieDomain(Site(r.Context()), r))
-	return zhttp.SeeOther(w, "/")
+	return zhttp.SeeOther(w, "https://sxic.cqu.edu.cn/counter")
 }
 
 func (h user) totpLogin(w http.ResponseWriter, r *http.Request) error {
